@@ -138,18 +138,23 @@
 \newskip\TUD@chapind
   \TUD@chapind 0pt
 \newskip\TUD@secind
-  \TUD@secind \TUD@parind
+%%  \TUD@secind \TUD@parind
+  \TUD@secind 0pt % Aenderung: kein Einzug bei sections
 \newskip\TUD@subsecind
-  \TUD@subsecind \TUD@parind
+%%  \TUD@subsecind \TUD@parind
+  \TUD@subsecind 0pt % Aenderung: kein Einzug bei subsections
 \newskip\TUD@subsubsecind
-  \TUD@subsubsecind \TUD@parind
+%%  \TUD@subsubsecind \TUD@parind
+  \TUD@subsubsecind 0pt % Aenderung: kein Einzug bei subsubsections
 \@ifclassloaded{scrartcl}{%
   \TUD@secind 0pt
-  \divide\TUD@subsecind by 2
+%%  \divide\TUD@subsecind by 2
+  \TUD@subsecind 0pt % Aenderung: kein Einzug bei subsections
 }{%
   \ifTUD@bigchapter
     \TUD@secind 0pt
-    \divide\TUD@subsecind by 2
+%%    \divide\TUD@subsecind by 2
+    \TUD@subsecind 0pt % Aenderung: kein Einzug bei subsections
   \else
     \divide\TUD@secind by 3
     \multiply\TUD@subsecind by 2
